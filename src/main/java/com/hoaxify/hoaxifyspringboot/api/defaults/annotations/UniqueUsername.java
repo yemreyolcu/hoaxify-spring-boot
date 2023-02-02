@@ -1,7 +1,7 @@
-package com.hoaxify.hoaxifyspringboot.defaults.annotations;
+package com.hoaxify.hoaxifyspringboot.api.defaults.annotations;
 
 
-import com.hoaxify.hoaxifyspringboot.defaults.UniqueUsernameValidator;
+import com.hoaxify.hoaxifyspringboot.api.defaults.UniqueUsernameValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

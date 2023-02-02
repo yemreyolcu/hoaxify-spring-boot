@@ -1,13 +1,12 @@
-package com.hoaxify.hoaxifyspringboot.responses;
-
+package com.hoaxify.hoaxifyspringboot.api.defaults;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class UserCreateResponse {
+public class GenericResponse {
+    private String message;
     private Long id;
     private String username;
-    private String displayName;
 }

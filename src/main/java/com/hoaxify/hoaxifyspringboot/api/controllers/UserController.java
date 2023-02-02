@@ -1,17 +1,13 @@
-package com.hoaxify.hoaxifyspringboot.controllers;
+package com.hoaxify.hoaxifyspringboot.api.controllers;
 
 
-import com.hoaxify.hoaxifyspringboot.defaults.GenericResponse;
-import com.hoaxify.hoaxifyspringboot.defaults.errors.ApiError;
-import com.hoaxify.hoaxifyspringboot.entities.User;
-import com.hoaxify.hoaxifyspringboot.responses.UserCreateResponse;
-import com.hoaxify.hoaxifyspringboot.services.UserService;
-import org.apache.coyote.Response;
+import com.hoaxify.hoaxifyspringboot.api.defaults.GenericResponse;
+import com.hoaxify.hoaxifyspringboot.api.defaults.errors.ApiError;
+import com.hoaxify.hoaxifyspringboot.api.entities.User;
+import com.hoaxify.hoaxifyspringboot.api.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 

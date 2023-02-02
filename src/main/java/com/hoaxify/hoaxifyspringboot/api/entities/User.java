@@ -1,8 +1,7 @@
-package com.hoaxify.hoaxifyspringboot.entities;
+package com.hoaxify.hoaxifyspringboot.api.entities;
 
-import com.hoaxify.hoaxifyspringboot.defaults.annotations.UniqueUsername;
+import com.hoaxify.hoaxifyspringboot.api.defaults.annotations.UniqueUsername;
 import lombok.*;
-import net.bytebuddy.utility.nullability.NeverNull;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

@@ -1,8 +1,8 @@
-package com.hoaxify.hoaxifyspringboot.defaults;
+package com.hoaxify.hoaxifyspringboot.api.defaults;
 
-import com.hoaxify.hoaxifyspringboot.defaults.annotations.UniqueUsername;
-import com.hoaxify.hoaxifyspringboot.entities.User;
-import com.hoaxify.hoaxifyspringboot.repositories.UserRepository;
+import com.hoaxify.hoaxifyspringboot.api.entities.User;
+import com.hoaxify.hoaxifyspringboot.api.repositories.UserRepository;
+import com.hoaxify.hoaxifyspringboot.api.defaults.annotations.UniqueUsername;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.validation.ConstraintValidator;
