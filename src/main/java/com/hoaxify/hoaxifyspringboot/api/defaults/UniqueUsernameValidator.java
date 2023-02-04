@@ -1,6 +1,6 @@
 package com.hoaxify.hoaxifyspringboot.api.defaults;
 
-import com.hoaxify.hoaxifyspringboot.api.entities.User;
+import com.hoaxify.hoaxifyspringboot.api.entities.model.User;
 import com.hoaxify.hoaxifyspringboot.api.repositories.UserRepository;
 import com.hoaxify.hoaxifyspringboot.api.defaults.annotations.UniqueUsername;
 import org.springframework.beans.factory.annotation.Autowired;

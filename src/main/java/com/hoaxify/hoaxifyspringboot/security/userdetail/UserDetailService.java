@@ -1,6 +1,6 @@
 package com.hoaxify.hoaxifyspringboot.security.userdetail;
 
-import com.hoaxify.hoaxifyspringboot.api.entities.User;
+import com.hoaxify.hoaxifyspringboot.api.entities.model.User;
 import com.hoaxify.hoaxifyspringboot.api.repositories.UserRepository;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

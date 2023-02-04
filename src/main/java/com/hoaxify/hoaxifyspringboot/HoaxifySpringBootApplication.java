@@ -1,11 +1,10 @@
 package com.hoaxify.hoaxifyspringboot;
 
-import com.hoaxify.hoaxifyspringboot.api.entities.User;
+import com.hoaxify.hoaxifyspringboot.api.entities.model.User;
 import com.hoaxify.hoaxifyspringboot.api.services.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;

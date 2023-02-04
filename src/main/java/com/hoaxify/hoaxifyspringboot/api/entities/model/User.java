@@ -1,4 +1,4 @@
-package com.hoaxify.hoaxifyspringboot.api.entities;
+package com.hoaxify.hoaxifyspringboot.api.entities.model;
 
 import com.hoaxify.hoaxifyspringboot.api.defaults.annotations.UniqueUsername;
 import lombok.*;

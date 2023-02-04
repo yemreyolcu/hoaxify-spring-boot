@@ -2,7 +2,7 @@ package com.hoaxify.hoaxifyspringboot.api.controllers;
 
 import com.hoaxify.hoaxifyspringboot.api.defaults.GenericResponse;
 import com.hoaxify.hoaxifyspringboot.api.defaults.errors.ApiError;
-import com.hoaxify.hoaxifyspringboot.api.entities.User;
+import com.hoaxify.hoaxifyspringboot.api.entities.model.User;
 import com.hoaxify.hoaxifyspringboot.api.exceptions.SQLExceptionHandler;
 import com.hoaxify.hoaxifyspringboot.api.services.UserService;
 import com.hoaxify.hoaxifyspringboot.security.jwt.http.AuthRequest;

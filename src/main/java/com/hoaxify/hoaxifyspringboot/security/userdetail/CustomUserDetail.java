@@ -1,6 +1,6 @@
 package com.hoaxify.hoaxifyspringboot.security.userdetail;
 
-import com.hoaxify.hoaxifyspringboot.api.entities.User;
+import com.hoaxify.hoaxifyspringboot.api.entities.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
