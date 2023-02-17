@@ -1,8 +1,10 @@
 package com.hoaxify.hoaxifyspringboot.api.services;
 
+import com.hoaxify.hoaxifyspringboot.api.entities.dto.HoaxUpdateDto;
 import com.hoaxify.hoaxifyspringboot.api.entities.model.Hoax;
 import com.hoaxify.hoaxifyspringboot.api.entities.model.User;
 import com.hoaxify.hoaxifyspringboot.api.repositories.HoaxRepository;
+import com.hoaxify.hoaxifyspringboot.api.repositories.UserRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -33,5 +35,9 @@ public class HoaxService {
     public Page<Hoax> hoaxsListFromUser(Pageable page, String username) {
         User foundUser = userService.userRetrieve(username);
         return hoaxRepository.findByUser(foundUser, page);
+    }
+
+    public void deleteHoax(long id) {
+        hoaxRepository.deleteById(id);
     }
 }

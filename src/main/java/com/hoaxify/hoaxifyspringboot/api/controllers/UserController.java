@@ -62,7 +62,7 @@ public class UserController {
     }
 
     @PutMapping("/{username}")
-    @PreAuthorize("#username == principal.username")
+    @PreAuthorize("#username == principal.username") // username params is equal to request users username
     public UserDto userUpdate(@PathVariable String username, @RequestBody UserUpdateDto userUpdateDto) {
         User foundUser = userService.userUpdate(username, userUpdateDto);
         return new UserDto(foundUser);

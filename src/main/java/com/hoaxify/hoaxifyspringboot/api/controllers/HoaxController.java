@@ -3,14 +3,19 @@ package com.hoaxify.hoaxifyspringboot.api.controllers;
 import com.hoaxify.hoaxifyspringboot.api.defaults.GenericResponse;
 import com.hoaxify.hoaxifyspringboot.api.defaults.errors.ApiError;
 import com.hoaxify.hoaxifyspringboot.api.entities.dto.HoaxDto;
+import com.hoaxify.hoaxifyspringboot.api.entities.dto.HoaxUpdateDto;
 import com.hoaxify.hoaxifyspringboot.api.entities.model.Hoax;
+import com.hoaxify.hoaxifyspringboot.api.entities.model.User;
 import com.hoaxify.hoaxifyspringboot.api.services.HoaxService;
+import com.hoaxify.hoaxifyspringboot.api.services.UserService;
 import com.hoaxify.hoaxifyspringboot.security.userdetail.CustomUserDetail;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.repository.query.Param;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.FieldError;
@@ -28,9 +33,11 @@ public class HoaxController {
 
 
     final HoaxService hoaxService;
+    final UserService userService;
 
-    public HoaxController(HoaxService hoaxService) {
+    public HoaxController(HoaxService hoaxService, UserService userService) {
         this.hoaxService = hoaxService;
+        this.userService = userService;
     }
 
 
@@ -63,6 +70,15 @@ public class HoaxController {
     @GetMapping("/{username}")
     Page<HoaxDto> hoaxsListFromUser(@PathVariable String username, @PageableDefault(sort = "id", direction = Sort.Direction.DESC) Pageable page) {
         return hoaxService.hoaxsListFromUser(page, username).map(HoaxDto::new);
+    }
+
+
+    @DeleteMapping("/{hoaxId}")
+    @PreAuthorize("@hoaxSecurityService.isAllowedToDelete(#hoaxId, principal)")
+    GenericResponse deleteHoax(@PathVariable long hoaxId) {
+        System.out.println("Log Controller" + hoaxId);
+        hoaxService.deleteHoax(hoaxId);
+        return new GenericResponse("Hoax Deleted", hoaxId, null);
     }
 
 }
